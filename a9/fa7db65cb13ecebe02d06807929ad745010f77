@@ -1,0 +1,24 @@
+seance1-explications.md
+  s_705810e4d80347::t_5bbdb3590c080c 1-31
+  s_705810e4d80347::t_5ff0a8f64364bb 32-34
+seance1-activites.py
+  s_705810e4d80347::t_492408b9a2e1ed 27
+  s_705810e4d80347::t_5595a3b73b1197 24-26
+  s_705810e4d80347::t_ddad5ccb0a6e37 28-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a9fa7db65cb13ecebe02d06807929ad745010f77",
+  "prompts": {},
+  "sessions": {
+    "s_705810e4d80347": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "bded3eac-0fb8-42ae-8e96-1797a1406138",
+        "model": "gpt-4.1"
+      },
+      "human_author": "Sofian <sofian.elba0@gmail.com>"
+    }
+  }
+}
