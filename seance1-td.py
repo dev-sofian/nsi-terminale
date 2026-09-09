@@ -34,3 +34,26 @@ def plus_ou_moins(n):
     print(f"Vous avez trouvé le bon nombre {n} en {tentatives} tentatives.")
 
 plus_ou_moins(randint(0, 100))
+
+# ---
+
+import time
+
+def for_en_while(indice, but):
+    if indice == None:
+        indice = 0
+    else:
+        but = but+1
+    while indice < but:
+        print(indice)
+        indice += 1
+
+def while_en_for(condition):
+    for _ in range(1 if condition else 10000):
+        print("Boucle")
+
+for_en_while(None, 50)
+booleen = False
+while_en_for(booleen)
+time.sleep(.15)
+booleen = True

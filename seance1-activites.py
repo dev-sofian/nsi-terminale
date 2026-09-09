@@ -52,3 +52,32 @@ def for_en_while(n):
 def for_classique(n):
     for i in range(n):
         print(i)
+
+# ---
+
+x = 2
+y = 5
+x = y
+y = x
+print(x==5, y==5)
+"""
+Certaines personnes se trompent en prédisant les valeurs de x et y au moment du print() parce qu'ils pensent que leurs valeurs initiales ont été interchangées, or, on voit que x prend la valeur de y AVANT que y prenne la valeur de x.
+Pour corriger l'erreur, on peut introduire une troisième variable à laquelle on affecte l'ancienne valeur de x ou de y pour permettre le changement de valeurs.
+On peut également écrire dans la même ligne : x, y = y, x.
+"""
+
+# ---
+
+def factorielle(n):
+    if n == 0:
+        return 1
+    return n * factorielle(n - 1)
+
+print(factorielle(4))
+# factorielle 4 : 4*factorielle(3)*factorielle(2)*factorielle(1)*factorielle(0) = 4*3*2*1*1 = 24
+
+"""
+Tant que n >= 0, la fonction se finit forcément. La fonction s'auto-appelle jusqu'à une limite définie à l'intérieur de la fonction elle-même; si l'argument 'n' est égal à 0, la fonction retourne 1 et se ferme. Ainsi, cela règle à la fois le problème de la fonction qui s'appelle à l'infini, et le fait que la factorielle ne met pas en facteur le nombre 0 (renvoie 1 à la place, qui ne change rien).
+"""
+
+# ---
