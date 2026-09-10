@@ -49,20 +49,4 @@ carnet = ["Léa", "Tom"]
 print(rechercher_nom(carnet, "Tom"))   # attendu : True
 print(rechercher_nom([], "Léa"))       # attendu : False
 
-def nom_le_plus_frequent(dictionnaire: dict):
-    plus_frequent = dictionnaire
-    frequence = []
-    combien = []
-    for i in range(len(dictionnaire)):
-        for j in range(len(dictionnaire)):
-            if dictionnaire[i] == dictionnaire[j] and i!=j:
-                if dictionnaire[j] in frequence:
-                    
-                else:
-                    frequence.append(dictionnaire[j])
-                    combien.append(1)
-                    
-"""
-1. Comparer chaque valeur
-"""
-
+assert rechercher_nom(carnet, "Tom") == False, "c'est faux 😂"
