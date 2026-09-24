@@ -35,6 +35,7 @@ def genere_kml(liste_longitudes, liste_latitudes):
     """ Fonction qui génère un fichier de données géographiques au format standard international KML
         Ce fichier est visionnable ensuite dans différents logiciels
     """
+    assert len(liste_longitudes) == len(liste_latitudes)
     fichier_kml = open(
         'ballon sonde.kml', 'w')    # Création et ouverture du fichier kml en mode "write"
     entete_fichier = '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -52,6 +53,7 @@ def genere_kml(liste_longitudes, liste_latitudes):
         corps_fichier += '</Placemark>\n'
         fichier_kml.write(corps_fichier)
     bas_fichier = '</Document>\n'
+    bas_fichier += '</kml>\n'
     fichier_kml.write(bas_fichier)
     fichier_kml.close()                         # Fermeture du fichier kml
 
@@ -72,7 +74,8 @@ def conversion_K_en_C(liste_temperatures):
     return liste_temperatures
 
 assert (conversion_K_en_C([273.15]) == [0.0])
-print(conversion_K_en_C(temperatures))
+temperatures = conversion_K_en_C(temperatures)
+print(temperatures)
 
 # QUESTION 3
 
@@ -91,3 +94,5 @@ def altitude_la_plus_froide(liste_altitudes, liste_temperatures):
 print(altitude_la_plus_froide(altitudes, temperatures))
 
 # AUTRES ELEMENTS DE CODE
+
+genere_kml(longitudes, latitudes)
