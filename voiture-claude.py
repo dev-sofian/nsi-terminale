@@ -1,17 +1,3 @@
-"""
-Simulation de garage avec visualisation Pygame.
-
-Reprend fidèlement la logique de la classe Voiture d'origine (rouler,
-tourner, faire_le_plein) et ajoute une fenêtre graphique qui montre les
-voitures se déplacer en temps réel sur un plan 2D.
-
-Installation :
-    pip install pygame
-
-Lancement :
-    python simulation_voitures_pygame.py
-"""
-
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -20,10 +6,6 @@ from math import cos, sin, radians
 from random import choice, randint
 
 import pygame
-
-# --------------------------------------------------------------------------- #
-# Modèle : la classe Voiture (logique inchangée par rapport à l'original)
-# --------------------------------------------------------------------------- #
 
 
 class Voiture:
